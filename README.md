@@ -2,7 +2,6 @@
 
 # 🌱 Smart Tomato Growth Monitoring System using IoT
 
-# 🌱 Smart Tomato Growth Monitoring System using IoT
 ESP32-based smart agriculture monitoring system for tomato crops in red soil conditions, integrating NPK, pH, soil moisture, temperature, and humidity sensors with Ubidots and Google Sheets for real-time and historical data tracking.
 
 ## Table of Contents
@@ -60,17 +59,17 @@ The data is sent to **Ubidots** for live monitoring and **Google Sheets** for hi
    git clone https://github.com/Lakshmi711/Smart-Agriculture-Growth-Monitoring-IoT.git
 4.Open final_agriculture.ino in Arduino IDE.
 
-5. Update the following in the code:
+5.Update the following in the code:
 
-6. Wi-Fi SSID & Password
+6.Wi-Fi SSID & Password
 
-7. Ubidots Token
+7.Ubidots Token
 
-7. Google Script URL
+8.Google Script URL
 
-8.Upload the code to the ESP32.
+9.Upload the code to the ESP32.
 
-9. Open Serial Monitor to check live readings and confirm data transmission.
+10. Open Serial Monitor to check live readings and confirm data transmission.
 
 ## 🛠 Technologies Used
 

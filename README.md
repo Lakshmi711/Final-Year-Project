@@ -2,122 +2,90 @@
 
 # 🌱 Smart Tomato Growth Monitoring System using IoT
 
-ESP32-Based Smart Agriculture Monitoring System
+# 🌱 Smart Tomato Growth Monitoring System using IoT
+ESP32-based smart agriculture monitoring system for tomato crops in red soil conditions, integrating NPK, pH, soil moisture, temperature, and humidity sensors with Ubidots and Google Sheets for real-time and historical data tracking.
 
-An IoT-based agriculture monitoring system using ESP32 to collect and send soil nutrient, environmental, and weather data to Ubidots and Google Sheets for real-time analysis.
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Components Used](#components-used)
+- [How It Works](#how-it-works)
+- [How to Run](#how-to-run)
+- [Technologies Used](#technologies-used)
+- [Author](#author)
 
-Table of Contents
+## About
+This project is an **IoT-based agriculture monitoring system** that uses ESP32 to collect environmental and soil nutrient data for tomato plants.  
+It works under **high temperature and humidity** conditions and is optimized for **red soil cultivation**.  
+The data is sent to **Ubidots** for live monitoring and **Google Sheets** for historical analysis.
 
-About
+## Features
+- 🌱 **NPK Sensor (RS485)** for nutrient measurement (Nitrogen, Phosphorus, Potassium)
+- 🌡️ **DHT22** for temperature and humidity monitoring
+- 💧 **Analog Soil Moisture Sensor** for irrigation tracking
+- 📊 **Ubidots Dashboard** for real-time data visualization
+- 📑 **Google Sheets Integration** for data logging
+- 📶 **ESP32 Wi-Fi** connectivity for wireless data transmission
 
-Features
+## Components Used
+| Component | Quantity | Purpose |
+|-----------|----------|---------|
+| ESP32 Development Board | 1 | IoT microcontroller |
+| Soil NPK Sensor (RS485) | 1 | Nutrient measurement |
+| RS485 to TTL Converter | 1 | Serial communication |
+| DHT22 Sensor | 1 | Temperature & humidity |
+| Analog Soil Moisture Sensor | 1 | Irrigation monitoring |
+| Breadboard & Jumper Wires | - | Circuit assembly |
+| Power Supply (5V) | 1 | Device powering |
 
-Components Used
+## How It Works
+1. **ESP32** collects data from:
+   - RS485 NPK sensor for Nitrogen, Phosphorus, and Potassium
+   - DHT22 sensor for temperature and humidity
+   - Analog soil moisture sensor
+2. Data is sent to:
+   - **Ubidots** for real-time visualization and alerts
+   - **Google Sheets** for historical tracking
+3. The system allows farmers and researchers to monitor crops remotely and make informed decisions.
 
-How It Works
+## How to Run
+1. **Install Arduino IDE** and add **ESP32 board support**.
+2. **Install required libraries**:
+   - `WiFi.h`
+   - `HTTPClient.h`
+   - `HardwareSerial.h`
+   - `DHT.h`
+3. **Clone this repository**:
+   ```bash
+   git clone https://github.com/Lakshmi711/Smart-Agriculture-Growth-Monitoring-IoT.git
+4.Open final_agriculture.ino in Arduino IDE.
 
-How to Run
+5. Update the following in the code:
 
-Technologies Used
+6. Wi-Fi SSID & Password
 
-Author
+7. Ubidots Token
 
-About
+7. Google Script URL
 
-This project is a smart agriculture monitoring system that helps farmers track key parameters like Soil NPK values, Temperature, Humidity, and Soil Moisture.
-The data is sent to Ubidots for IoT dashboard visualization and stored in Google Sheets for long-term analysis.
-It uses RS485-to-TTL communication for the NPK sensor and a hardened ESP32 firmware with Wi-Fi reconnection, Modbus CRC checking, and non-blocking data acquisition.
+8.Upload the code to the ESP32.
 
-Features
+9. Open Serial Monitor to check live readings and confirm data transmission.
 
-Reads Soil NPK values using an RS485-to-TTL interface.
+## 🛠 Technologies Used
 
-Measures temperature and humidity with DHT sensor.
+- ESP32 (Wi-Fi enabled microcontroller)
 
-Measures soil moisture with an analog soil sensor.
+- Ubidots (IoT dashboard for visualization)
 
-Sends data to Ubidots IoT cloud.
+- Google Sheets (data logging)
 
-Logs data into Google Sheets via Apps Script Webhook.
+- Arduino IDE (programming environment)
 
-Built-in CRC and timeout handling for stable sensor reading.
+- Sensors: NPK RS485, DHT22, Analog Soil Moisture Sensor
 
-Wi-Fi auto-reconnect for reliability.
+## Author
+**Lakshmi K**  
+- GitHub: [Lakshmi711](https://github.com/Lakshmi711)  
+- LinkedIn: [Lakshmi711](https://www.linkedin.com/in/lakshmi-ramesh07/)  
 
-Components Used
-
-ESP32 Dev Board
-
-Soil NPK Sensor (RS485)
-
-RS485 to TTL Converter
-
-DHT11/DHT22 Temperature & Humidity Sensor
-
-Analog Soil Moisture Sensor
-
-Jumper Wires & Breadboard
-
-Power Supply (5V)
-
-How It Works
-
-The ESP32 reads NPK values from the sensor via RS485 protocol.
-
-The DHT sensor reads temperature and humidity.
-
-The analog sensor measures soil moisture and converts it to percentage.
-
-Data is pushed to Ubidots via HTTPS and sent to Google Sheets for storage.
-
-The system automatically retries in case of sensor or Wi-Fi failure.
-
-How to Run
-
-Clone this repository:
-
-git clone https://github.com/YourUsername/esp32-smart-agriculture.git
-cd esp32-smart-agriculture
-
-
-Open the .ino file in Arduino IDE.
-
-Install required libraries:
-
-WiFi.h (Built-in)
-
-HTTPClient.h (Built-in)
-
-DHT.h (DHT sensor library)
-
-ModbusMaster.h (RS485 communication)
-
-Update the following in the code:
-
-Wi-Fi SSID & Password
-
-Ubidots Token & Variable IDs
-
-Google Sheets Webhook URL
-
-Connect your ESP32 and upload the code.
-
-Technologies Used
-
-Arduino IDE for firmware development
-
-ESP32 Wi-Fi Module for connectivity
-
-Ubidots for IoT dashboard visualization
-
-Google Sheets for data logging
-
-RS485 Modbus Protocol for NPK sensor communication
-
-Author
-
-Lakshmi K
-
-GitHub: Lakshmi711
-
-LinkedIn: Lakshmi711

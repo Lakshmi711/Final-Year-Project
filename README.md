@@ -69,7 +69,7 @@ The data is sent to **Ubidots** for live monitoring and **Google Sheets** for hi
 
 9.Upload the code to the ESP32.
 
-10. Open Serial Monitor to check live readings and confirm data transmission.
+10.Open Serial Monitor to check live readings and confirm data transmission.
 
 ## 🛠 Technologies Used
 
